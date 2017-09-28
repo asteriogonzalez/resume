@@ -4,7 +4,7 @@ This module provide a support for saving and restoring the running locals vars a
 
 The integration as been designed to be seamless:
 
-1. just create a checkpoint at the begging of the function
+1. just create a checkpoint at the beginning of the function
 2. set the 1st run time variables
 3. call restore() before the evolutionary process
 4. performs any computation cycles
