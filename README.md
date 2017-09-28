@@ -1,6 +1,6 @@
 # resume module
 
-This module provide a support for saving and restoring the running locals vars and some interpreter internal status like random state to resume a long computation if has been interrupted for any reason.
+This module provide a support for saving and restoring the running locals vars and some interpreter internal status like random state to resume a long computation in case has been interrupted for any reason.
 
 The integration as been designed to be seamless:
 
