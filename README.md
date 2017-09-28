@@ -76,7 +76,7 @@ def compute_primes(n=10):
     candidate = primes[-1]
 
     # restore previous work (if any)
-    chp.restore()  # note that 'n' preserve the current calling value
+    chp.restore()  # note that calling argument 'n' will be preserve
 
     # continue from last time (or initial state)
     while n > 0:
