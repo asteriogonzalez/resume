@@ -1,8 +1,6 @@
 # resume module
 
-This module provide a support for saving and restoring the same interpreter
-state in different executions saving the locals and some internal status
-like random state in a checkpoint file.
+This module provide a support for saving and restoring the running locals vars and some interpreter internal status like random state to resume a long computation if has been interrupted for any reason.
 
 The integration as been designed to be seamless:
 
@@ -37,8 +35,8 @@ In situations where we are developing an application or library that will be use
 
 The integration with existing code must be seamless, hiding all the details to the user. Actually there is only 3 code lines you should insert in your existing code.
 
-1. instantiate a checkpoint, usually at the begining of the function of code.
-2. select the restoration point in case of re-run
+1. instantiate a checkpoint, usually at the beginning of the function of code.
+2. select the restoration point in case of re-run.
 3. decide when save the internal state within loop calculations.
 
 ## Show me an example
@@ -111,8 +109,8 @@ and some code for testing
 - The checkpoint is stored in compressed pickle format
 - Checkpoints preserve numpy random state to guarantee the same results as if the process will not be interrupted
 - Checkpoints are stored in '.checkpoints/' hidden folder by default.
-- checkpoints will be discarded if las update is beyond of CACHE_EXPIRE by default.
-- checkpoints store all basic types and numpy types by default.
+- Checkpoints will be discarded if las update is beyond of CACHE_EXPIRE by default.
+- Checkpoints store all basic types and numpy types by default.
 - The code is in alpha version, any comment of pull request is welcome.
 
 ## Install
